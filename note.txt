@@ -1,0 +1,18 @@
+Onboard Rozitek
+
+I. Technical stack
++ backend: nodejs
++ database: mysql
+
+II. Database analysis
+1. product table
++ 1 product --- 1-k apparel size
+  + 1 dickies pant --- 1-k size
+    + 1 dickies pant --- size 40
+    + 1 dickies pant --- size 41 
+    + 1 dickies pant --- size 42
+
++ k products --- k categories
+  + new table: productsCategories
+    + productId
+    + categoryId
