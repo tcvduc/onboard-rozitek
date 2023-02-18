@@ -1,10 +1,31 @@
 Onboard Rozitek
 
-I. Technical stack
+I. Problem
+- Warehousing Application Showcase
+- Goal
++ Design a ERD for a warehousing application, the candidate 
+can choose to do 1 out of 2 flows, ingest data from the
+operators or extract the data upon requests.
+  -> Already done
++ The object's data should include material name, position,
+quantity and day of import.
+  -> Already done
++ Design a restAPI to extract the data above for further use.
+  -> Implementing
+- Prerequisites
++ Selection of programming language and database is done 
+by the applicant, preferable to run on Linux system.
+  + NodeJS multiple system
+  + done
++ Implementation time approximately 5 days.
+
+
+II. Technical stack
 + backend: nodejs
 + database: mysql
 
-II. Database analysis
+
+III. Database analysis
 1. product table
 + 1 product --- 1-k apparel size
   + 1 dickies pant --- 1-k size
@@ -16,3 +37,32 @@ II. Database analysis
   + new table: productsCategories
     + productId
     + categoryId
+
+IV. RestAPI Design
+1. Get all product
++ route: /api/product
+
++ data: {
+  product: []
+}
+
+2. Get Apparel Size record
++ route: /api/apparelSize
+
++ data: {
+  apparelSizeRecord: []
+}
+
+2. Get all categories
++ route: /api/categories
+
++ data: {
+  categories: []
+}
+
+3. Get all color
++ route: /api/color
+
++ data: {
+  colors: []
+}

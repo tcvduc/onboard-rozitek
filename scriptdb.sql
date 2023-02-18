@@ -58,9 +58,9 @@ create table categories(
 -- ----------------------------------
 -- records for `categories`
 -- ----------------------------------
-insert into categories(categoryId,parentCategoryId,categoryName) values ('category 1','parent category 1','category 1');
-insert into categories(categoryId,parentCategoryId,categoryName) values ('category 2','parent category 1','category 2');
-insert into categories(categoryId,parentCategoryId,categoryName) values ('category 3','parent category 1','category 3');
+insert into categories(categoryId,parentCategoryId,categoryName) values ('category id 1','parent category 1','category 1');
+insert into categories(categoryId,parentCategoryId,categoryName) values ('category id 2','parent category 1','category 2');
+insert into categories(categoryId,parentCategoryId,categoryName) values ('category id 3','parent category 1','category 3');
 
 
 
@@ -73,9 +73,6 @@ create table productCategories(
 	categoryId nvarchar(255),
     primary key (productId,categoryId)
 );
-
-
-
 
 -- ----------------------------------
 -- records for `productCategories`
@@ -94,6 +91,13 @@ create table productColors(
     primary key (colorId)
 );
 
+-- ----------------------------------
+-- records for `productColors`
+-- ----------------------------------
+insert into productColors(colorId) values ('color id 1');
+insert into productColors(colorId) values ('color id 2');
+insert into productColors(colorId) values ('color id 3');
+
 
 -- ----------------------------------
 -- table for `color`
@@ -104,6 +108,16 @@ create table color(
     colorName nvarchar(255),
     primary key (colorId)
 );
+
+-- ----------------------------------
+-- records for `color`
+-- ----------------------------------
+insert into color(colorId,colorCode,colorName) values ('color id 1','#clc123','red');
+insert into color(colorId,colorCode,colorName) values ('color id 2','#clc312','green');
+insert into color(colorId,colorCode,colorName) values ('color id 3','#clc213','blue');
+
+
+
 
 
 
