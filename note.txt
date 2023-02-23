@@ -66,3 +66,8 @@ IV. RestAPI Design
 + data: {
   colors: []
 }
+
+V. Rozitek Technical Stack
++ Web Server: Apache, Nginx
++ Operating System: CentOS
++ AI, Big Data, Deep Learning, Machine Learning

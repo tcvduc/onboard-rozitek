@@ -1,15 +1,22 @@
 const express = require("express");
+const expressHandlebars = require("express-handlebars");
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", function (req, res) {
-  return res.json({
-    data: "home page api",
-  });
-});
+app.engine(
+  "hbs",
+  expressHandlebars.engine({
+    defaultLayout: "layoutHome.hbs",
+    extname: ".hbs",
+    layoutsDir: "views/_layouts",
+  })
+);
 
+app.set("view engine", "hbs");
+app.use("/public", express.static("assets"));
+app.use("/", require("./routes/home.route"));
 app.use("/api", require("./routes/product.route"));
 app.use("/api", require("./routes/apparelSize.route"));
 app.use("/api", require("./routes/categories.route"));
