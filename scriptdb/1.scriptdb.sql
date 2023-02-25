@@ -88,15 +88,17 @@ insert into productCategories(productId,categoryId) values('product id 1','categ
 -- ----------------------------------
 create table productColors(
 	colorId nvarchar(255),
-    primary key (colorId)
+    productId nvarchar(255),
+    primary key (colorId),
+    foreign key (productId) references product(productId)
 );
 
 -- ----------------------------------
 -- records for `productColors`
 -- ----------------------------------
-insert into productColors(colorId) values ('color id 1');
-insert into productColors(colorId) values ('color id 2');
-insert into productColors(colorId) values ('color id 3');
+insert into productColors(colorId,productId) values ('color id 1','product id 1');
+insert into productColors(colorId,productId) values ('color id 2','product id 2');
+insert into productColors(colorId,productId) values ('color id 3','product id 2');
 
 
 -- ----------------------------------

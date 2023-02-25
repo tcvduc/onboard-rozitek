@@ -69,5 +69,6 @@ IV. RestAPI Design
 
 V. Rozitek Technical Stack
 + Web Server: Apache, Nginx
++ Database: PostgreSQL
 + Operating System: CentOS
 + AI, Big Data, Deep Learning, Machine Learning

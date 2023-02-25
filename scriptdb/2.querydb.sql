@@ -47,4 +47,35 @@ on c.categoryId = pc.categoryId;
 
 
 
+-- ---------------------------------
+-- 3. Get product color info
+-- ---------------------------------
+use onboardrozitek;
+
+select *
+from productColors as pc;
+
+
+
+-- ---------------------------------
+-- 4. Get product 1 color info
+-- --------------------------- ------
+select *
+from product as p;
+
+select * 
+from productColors as pc;
+
+select *
+from color as c;
+
+
+select p.productId, p.productName, pc.colorId,
+c.colorCode, c.colorName
+from product as p
+join productColors as pc
+on p.productId = pc.productId
+join color as c 
+on c.colorId = pc.colorId
+where p.productId = 'product id 1';
 
